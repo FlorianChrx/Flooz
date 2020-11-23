@@ -24,14 +24,8 @@ public class UserController {
     @PutMapping(path = "/users/add")
     public @ResponseBody
     Map<String, Boolean> addUser(@RequestBody User user) {
-        System.out.println("debut");
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
         user.setRoles("USER");
-        userRepository.save(user);
-        System.out.println("fin");
-        return userRepository.findById(user.getUsername()) != null ?
-                Collections.singletonMap("success", true) :
-                Collections.singletonMap("success", false);
+        return addUserByAdmin(user);
     }
 
     @PutMapping(path = "/admin/users")
@@ -39,9 +33,7 @@ public class UserController {
     Map<String, Boolean> addUserByAdmin(@RequestBody User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         userRepository.save(user);
-        return userRepository.findById(user.getUsername()) != null ?
-                Collections.singletonMap("success", true) :
-                Collections.singletonMap("success", false);
+        return Collections.singletonMap("success", userRepository.findById(user.getUsername()).isPresent());
     }
 
 }
