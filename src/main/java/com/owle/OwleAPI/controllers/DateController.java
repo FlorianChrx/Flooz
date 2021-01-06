@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @RestController
 public class DateController {
 
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     public @ResponseBody
     LocalDateTime getDate() {
         return LocalDateTime.now();
