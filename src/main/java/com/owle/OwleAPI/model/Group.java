@@ -1,19 +1,24 @@
 package com.owle.OwleAPI.model;
 
+import com.owle.OwleAPI.ids.GroupId;
 import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 
 @Getter
 @Setter
 @ToString
 @EqualsAndHashCode
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-public class Message {
+@IdClass(GroupId.class)
+public class Group {
     @Id
-    private String name;
-    private String msg;
+    public int id;
+
+    @Id
+    public User user;
 }
