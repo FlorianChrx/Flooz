@@ -1,10 +1,7 @@
 package com.owle.OwleAPI.ids;
 
 import com.owle.OwleAPI.model.User;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.io.Serializable;
 
@@ -12,6 +9,8 @@ import java.io.Serializable;
 @Setter
 @ToString
 @EqualsAndHashCode
+@AllArgsConstructor
+@NoArgsConstructor
 public class GroupId implements Serializable {
     private int id;
     private User user;
