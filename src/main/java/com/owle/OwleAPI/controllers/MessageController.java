@@ -15,8 +15,7 @@ public class MessageController {
     private MessageRepository messageRepository;
 
     @GetMapping(path = "/public/message/{name}")
-    public @ResponseBody
-    Message getMessage(@PathVariable String name) {
+    public Message getMessage(@PathVariable String name) {
         return messageRepository.findById(name).orElse(new Message("Error", "Error"));
     }
 
