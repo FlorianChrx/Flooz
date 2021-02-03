@@ -1,7 +1,7 @@
-package com.owle.OwleAPI.controllers;
+package fr.da2i.flooz.controllers;
 
-import com.owle.OwleAPI.model.User;
-import com.owle.OwleAPI.repositories.UserRepository;
+import fr.da2i.flooz.model.User;
+import fr.da2i.flooz.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;

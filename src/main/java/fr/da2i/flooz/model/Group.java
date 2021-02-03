@@ -1,20 +1,21 @@
-package com.owle.OwleAPI.model;
+package fr.da2i.flooz.model;
 
-import com.owle.OwleAPI.ids.GroupId;
-import lombok.*;
+import fr.da2i.flooz.ids.GroupId;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
+import javax.persistence.Table;
 
-@Getter
-@Setter
-@ToString
-@EqualsAndHashCode
+@Data
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @IdClass(GroupId.class)
+@Table(name = "groups")
 public class Group {
     @Id
     public int id;

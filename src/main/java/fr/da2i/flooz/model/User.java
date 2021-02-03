@@ -1,4 +1,4 @@
-package com.owle.OwleAPI.model;
+package fr.da2i.flooz.model;
 
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
@@ -12,10 +12,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
-@Getter
-@Setter
-@ToString
-@EqualsAndHashCode
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity

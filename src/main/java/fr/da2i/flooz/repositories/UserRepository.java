@@ -1,6 +1,6 @@
-package com.owle.OwleAPI.repositories;
+package fr.da2i.flooz.repositories;
 
-import com.owle.OwleAPI.model.User;
+import fr.da2i.flooz.model.User;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

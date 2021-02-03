@@ -1,4 +1,4 @@
-package com.owle.OwleAPI.auth;
+package fr.da2i.flooz.auth;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

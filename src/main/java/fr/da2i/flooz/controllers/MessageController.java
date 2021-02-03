@@ -1,11 +1,10 @@
-package com.owle.OwleAPI.controllers;
+package fr.da2i.flooz.controllers;
 
-import com.owle.OwleAPI.model.Message;
-import com.owle.OwleAPI.repositories.MessageRepository;
+import fr.da2i.flooz.model.Message;
+import fr.da2i.flooz.repositories.MessageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController

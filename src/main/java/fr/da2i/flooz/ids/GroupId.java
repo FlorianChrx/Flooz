@@ -1,14 +1,11 @@
-package com.owle.OwleAPI.ids;
+package fr.da2i.flooz.ids;
 
-import com.owle.OwleAPI.model.User;
+import fr.da2i.flooz.model.User;
 import lombok.*;
 
 import java.io.Serializable;
 
-@Getter
-@Setter
-@ToString
-@EqualsAndHashCode
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class GroupId implements Serializable {

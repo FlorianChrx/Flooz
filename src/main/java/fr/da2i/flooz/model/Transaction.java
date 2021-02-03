@@ -1,23 +1,23 @@
-package com.owle.OwleAPI.model;
+package fr.da2i.flooz.model;
 
-import com.owle.OwleAPI.ids.TransactionId;
-import lombok.*;
+import fr.da2i.flooz.ids.GroupId;
+import fr.da2i.flooz.ids.TransactionId;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 
-@Getter
-@Setter
-@ToString
-@EqualsAndHashCode
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @IdClass(TransactionId.class)
 public class Transaction {
     @Id
-    private Group group;
+    private GroupId tgroup;
     @Id
     private User spender;
     private Double amount;

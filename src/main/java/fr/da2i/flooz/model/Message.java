@@ -1,14 +1,11 @@
-package com.owle.OwleAPI.model;
+package fr.da2i.flooz.model;
 
 import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Getter
-@Setter
-@ToString
-@EqualsAndHashCode
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
