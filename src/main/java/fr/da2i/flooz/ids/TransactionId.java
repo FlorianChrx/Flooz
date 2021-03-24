@@ -2,9 +2,10 @@ package fr.da2i.flooz.ids;
 
 import fr.da2i.flooz.model.Group;
 import fr.da2i.flooz.model.User;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import javax.persistence.EmbeddedId;
 import java.io.Serializable;
 
 @Data
