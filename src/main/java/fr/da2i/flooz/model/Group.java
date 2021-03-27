@@ -4,7 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import java.io.Serializable;
 import java.util.List;
 
 @Data
@@ -12,10 +16,9 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "groups")
-public class Group {
+public class Group implements Serializable {
     @Id
     public int id;
-    @Id
     @OneToMany
     public List<User> users;
     private String name;

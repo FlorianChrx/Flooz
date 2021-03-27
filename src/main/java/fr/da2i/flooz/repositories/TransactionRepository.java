@@ -1,5 +1,7 @@
 package fr.da2i.flooz.repositories;
 
-public class TransactionRepository {
+import fr.da2i.flooz.model.Transaction;
+import org.springframework.data.repository.CrudRepository;
 
+public interface TransactionRepository extends CrudRepository<Transaction, Integer> {
 }
