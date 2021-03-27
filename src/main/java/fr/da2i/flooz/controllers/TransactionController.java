@@ -19,11 +19,11 @@ public class TransactionController {
 
 	@GetMapping(path = "/user/transaction/{group}")
 	public Iterable<Transaction> getTransactionByGroup(@PathVariable String group) {
-		return transactionRepository.findByGroup(group);
+		return transactionRepository.findByTgroup(group);
 	}
 
 	@GetMapping(path = "/user/transaction/{group}/{username}")
-	public Iterable<Transaction> getTransactionByGroupAndSpender(@PathVariable String user, @PathVariable String group) {
+	public Iterable<Transaction> getTransactionByTgroupAndSpender(@PathVariable String user, @PathVariable String group) {
 		return transactionRepository.findByUserAndGroup(user, group);
 	}
 

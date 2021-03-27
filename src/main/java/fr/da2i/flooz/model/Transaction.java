@@ -20,7 +20,7 @@ public class Transaction {
     private Integer id;
     private Double amount;
     
-    private Group group;
+    private Group tgroup;
     
     private User user;
     
