@@ -1,13 +1,9 @@
 package fr.da2i.flooz.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
@@ -18,8 +14,12 @@ import java.util.List;
 @Table(name = "groups")
 public class Group implements Serializable {
     @Id
-    public int id;
-    @OneToMany
-    public List<User> users;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+    @ManyToMany
+    @JsonIgnore
+    @EqualsAndHashCode.Exclude
+    @ToString.Exclude
+    private List<User> users;
     private String name;
 }
