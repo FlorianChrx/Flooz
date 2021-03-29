@@ -1,10 +1,10 @@
-package com.owle.OwleAPI;
+package fr.da2i.flooz;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class OwleApplicationTests {
+class FloozApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,7 +1,7 @@
-package com.owle.OwleAPI.auth;
+package fr.da2i.flooz.auth;
 
-import com.owle.OwleAPI.model.User;
-import com.owle.OwleAPI.repositories.UserRepository;
+import fr.da2i.flooz.model.User;
+import fr.da2i.flooz.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
